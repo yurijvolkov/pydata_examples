@@ -38,7 +38,7 @@ train_step = tf.train.AdamOptimizer().minimize(loss, name='train_step')
 
 #### Logging graph definition ####
 
-with tf.summary.FileWriter('./log_dir') as writer:
+with tf.summary.FileWriter('./log_dir/tb') as writer:
     writer.add_graph(tf.get_default_graph())
 
 
