@@ -7,9 +7,6 @@ condition = x > 0
 
 result = tf.cond(condition, lambda: tf.sqrt(x), lambda: 0.)
 
-with tf.summary.FileWriter('./log_dir/while') as writer:
-    writer.add_graph(tf.get_default_graph())
-
 with tf.Session() as sess:
     print(sess.run(result))
 

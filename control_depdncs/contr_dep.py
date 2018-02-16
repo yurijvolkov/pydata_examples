@@ -14,7 +14,8 @@ print('Without control dependencies :')
 with tf.Session() as sess:
     for _ in range(100):
         sess.run(tf.global_variables_initializer())
-        sys.stdout.write(str(sess.run([assign, z])))
+        _, _z = sess.run([assign, z])
+        sys.stdout.write(str(_z))
 
 
 print('\n\nWith control dependencies :')
@@ -26,7 +27,8 @@ with tf.control_dependencies([z]):
 with tf.Session() as sess:
     for _ in range(100):
         sess.run(tf.global_variables_initializer())
-        sys.stdout.write(str(sess.run([assign, z])))
+        _, _z = sess.run([assign, z])
+        sys.stdout.write(str(_z))
 
 print('')
 
