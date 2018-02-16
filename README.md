@@ -9,7 +9,7 @@
 * **op** : Implementation of custom Op in Python.
 
 ## Presentation : 
-PyData_Volkov.pdf
+PyData_Volkov.pdf (in root of repo)
 
 ## Video record (Russian) :
 https://youtu.be/aoin1nl_eSA?t=5810
